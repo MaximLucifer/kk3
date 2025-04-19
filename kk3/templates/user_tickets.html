@@ -48,56 +48,99 @@
 
 <style>
     .page-center {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.custom-table thead {
+    background-color: #333;
+    color: white;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптация до 768px */
+@media (max-width: 768px) {
+    .page-center {
+        padding: 0.75rem;
     }
 
     .logo-center {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-    }
-
-    .table-wrapper {
-        overflow-x: auto;
-    }
-
-    .custom-table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: white;
-        border: 1px solid #ddd;
-    }
-
-    .custom-table thead {
-        background-color: #333;
-        color: white;
+        margin-bottom: 1rem;
     }
 
     .custom-table th,
     .custom-table td {
-        padding: 0.75rem;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .custom-table tr:hover {
-        background-color: #f1f1f1;
+        padding: 0.5rem;
+        font-size: 0.95rem;
     }
 
     .btn-link {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background-color 0.2s ease;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Адаптация до 480px */
+@media (max-width: 480px) {
+    .custom-table th,
+    .custom-table td {
+        font-size: 0.85rem;
+        padding: 0.4rem;
     }
 
-    .btn-link:hover {
-        background-color: #0056b3;
+    .btn-link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
     }
+
+    .logo-center {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>
 {% endblock content %}
